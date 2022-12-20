@@ -11,10 +11,10 @@ form.addEventListener("submit", (event) => {
 
   if (email.value === "" || password.value === "") {
     alert(message); //window alert dla uzytkownika jesli zostawi puste pola
+  } else {
+    console.log({ email: email.value, password: password.value }); //tworzy obiekt danych
+    event.currentTarget.reset(); // resetuje formularz po wysłaniu danych
   }
-
-  console.log({ email: email.value, password: password.value }); //tworzy obiekt danych
-  event.currentTarget.reset(); // resetuje formularz po wysłaniu danych
 });
 
 

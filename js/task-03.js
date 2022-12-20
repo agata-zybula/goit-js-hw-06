@@ -23,6 +23,6 @@ const images = [
 //   list.insertAdjacentHTML('afterBegin', newLi);
 // });
 
-const list = document.querySelector(".gallery");
-const imageCode = images.map((image) => `<li class="item"><img class="image" src=${image.url} alt=${image.alt} /></li>`).join("");
-list.insertAdjacentHTML("afterbegin", imageCode);
+const list = document.querySelector(".gallery"); //szukamy listy ul po classie
+const imageCode = images.map((image) => `<li class="item"><img class="image" src=${image.url} alt="${image.alt}" /></li>`).join(""); //mapem iterujemy po tablicy images, pozniej tworzymy tag li o klasie item, img o klasie image, dodaje zrodlo do imgae url i alt url, wstawiam join aby usunac grawisy
+list.insertAdjacentHTML("afterbegin", imageCode); //dodanie elementow do listy
